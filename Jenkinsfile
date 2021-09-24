@@ -5,10 +5,6 @@ pipeline {
     agent { docker { image 'python:3.5.1' } }
     
 
-    node{
-    // def commit_id 
-    // commit_id = 'python-test'
-
     stages {
         
         stage('build') {
@@ -20,14 +16,12 @@ pipeline {
 
         stage('docker build/push'){
         docker.withRegistry('https://index.docker.io/v1/', 'dockerhub'){
-            def app = docker.build("ramyrr/docker-python:${commit_id}", '.').push()
+            def app = docker.build("ramyrr/docker-python:python", '.').push()
         }
     } 
 
         
     }
-
-}
 
 }
 
