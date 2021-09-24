@@ -2,3 +2,6 @@
 
 pandas
 flask
+scipy
+sklearn
+statsmodels

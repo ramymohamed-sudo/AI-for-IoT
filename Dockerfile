@@ -17,8 +17,13 @@ COPY test.csv ./test.csv
 COPY train-rul.py ./train-rul.py
 COPY inference-rul.py ./inference-rul.py
 
+# COPY 1st_test ./1st_test
+# COPY 2nd_test ./2nd_test
+# COPY txt ./txt
+
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade matplotlib
 
-
-RUN python3 train-rul.py
+RUN python3 train-rul.py   
+# RUN python3 nasa_bearing_feature_extract.py         
