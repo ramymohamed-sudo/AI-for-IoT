@@ -29,7 +29,7 @@ node{
 
     stage('test'){
         withPythonEnv('python3') {
-        sh 'python --version'
+        sh 'python3 --version'
         // sh 'python3 train-rul.py'
         }
         // nodejs(nodeJSInstallationName: 'nodejs'){
