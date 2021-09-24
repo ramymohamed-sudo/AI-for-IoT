@@ -3,6 +3,9 @@
 pipeline {
 
     agent { docker { image 'python:3.5.1' } }
+    
+
+    node{
     def commit_id 
     commit_id = 'python-test'
 
@@ -23,6 +26,9 @@ pipeline {
 
         
     }
+
+}
+
 }
 
 // node{
