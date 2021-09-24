@@ -6,8 +6,8 @@ pipeline {
     
 
     node{
-    def commit_id 
-    commit_id = 'python-test'
+    // def commit_id 
+    // commit_id = 'python-test'
 
     stages {
         
