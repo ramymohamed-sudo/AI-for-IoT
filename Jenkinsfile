@@ -28,10 +28,13 @@ node{
     }
 
     stage('test'){
-        withPythonEnv('python3') {
+        def myTestContainer = docker.image('python:latest')
+        myTestContainer.pull()
+        myTestContainer.inside {
         sh 'python3 --version'
         // sh 'python3 train-rul.py'
         }
+        
         // nodejs(nodeJSInstallationName: 'nodejs'){
         //     sh 'npm install --only-dev'
         //     // sh 'npm test'
