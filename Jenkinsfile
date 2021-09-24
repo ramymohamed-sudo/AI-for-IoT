@@ -28,10 +28,10 @@ node{
     }
 
     stage('test'){
-        // withPythonEnv('python3') {
+        withPythonEnv('python3') {
         sh 'python --version'
         // sh 'python3 train-rul.py'
-        // }
+        }
         // nodejs(nodeJSInstallationName: 'nodejs'){
         //     sh 'npm install --only-dev'
         //     // sh 'npm test'
